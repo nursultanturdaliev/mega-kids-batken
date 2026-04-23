@@ -6,7 +6,8 @@
 .t { font-family: Manrope, "DejaVu Sans", Arial, sans-serif; }
 ]]></style></defs>
   <rect x="6" y="12" width="408" height="70" rx="24" fill="#12365d" stroke="#8fb4dc" stroke-width="3"/>
-  <rect x="140" y="74" width="140" height="34" rx="12" fill="#12365d" stroke="#8fb4dc" stroke-width="3"/>
+  <rect x="172" y="76" width="76" height="14" rx="4" fill="#12365d"/>
+  <rect x="138" y="86" width="144" height="30" rx="11" fill="#12365d" stroke="#8fb4dc" stroke-width="3"/>
   <text x="52" y="58" class="t" font-weight="800" font-size="50" fill="#9de8da">MEGA</text>
   <text x="222" y="58" class="t" font-weight="800" font-size="50" fill="#ff7a5f">KIDS</text>
   <text x="210" y="100" text-anchor="middle" class="t" font-weight="800" font-size="34" fill="#ffffff">БАТКЕН</text>

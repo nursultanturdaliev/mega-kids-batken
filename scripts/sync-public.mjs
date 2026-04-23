@@ -8,7 +8,7 @@ const pub = join(root, "public");
 
 rmSync(pub, { recursive: true, force: true });
 mkdirSync(pub, { recursive: true });
-for (const f of ["index.html", "styles.css", "favicon.svg"]) {
+for (const f of ["index.html", "highlights.html", "styles.css", "favicon.svg"]) {
   copyFileSync(join(root, f), join(pub, f));
 }
 cpSync(join(root, "assets"), join(pub, "assets"), { recursive: true });

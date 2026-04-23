@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ky">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mega Kids — Instagram Highlights</title>
+    <meta name="description" content="Mega Kids үчүн Instagram Highlights story шаблондору: дарек, саат, байланыш жана башка бөлүмдөр." />
+    <style>
+      :root {
+        --bg: #0f2139;
+        --panel: #142a47;
+        --text: #f3f7ff;
+        --muted: #c4d1e4;
+        --accent: #ff6e59;
+        --mint: #9be7da;
+        --card: #ffffff;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: linear-gradient(180deg, #0c1a2e 0%, #112947 100%);
+        color: var(--text);
+      }
+      a { color: inherit; }
+
+      .top {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.25rem 1rem 0.8rem;
+      }
+
+      .topbar {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .home-link {
+        text-decoration: none;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.2);
+        color: #fff;
+        padding: 0.55rem 0.9rem;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+
+      h1 {
+        margin: 0.2rem 0 0.35rem;
+        font-size: clamp(1.45rem, 3vw, 2rem);
+      }
+
+      .lead {
+        margin: 0;
+        color: var(--muted);
+        max-width: 68ch;
+        line-height: 1.55;
+      }
+
+      .list {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 1rem;
+        display: grid;
+        gap: 1.1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+
+      .story-wrap {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 16px;
+        padding: 0.7rem;
+      }
+
+      .story-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .story-title {
+        margin: 0;
+        font-size: 0.95rem;
+        font-weight: 800;
+      }
+
+      .story-actions {
+        display: flex;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        border: 1px solid rgba(255,255,255,0.25);
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+        border-radius: 999px;
+        padding: 0.34rem 0.64rem;
+        font-size: 0.74rem;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .btn:hover { background: rgba(255,255,255,0.22); }
+
+      .story {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 9/16;
+        border-radius: 18px;
+        overflow: hidden;
+        background: radial-gradient(circle at 75% 8%, rgba(255,255,255,0.1), transparent 40%), linear-gradient(180deg, #20456f 0%, #173458 52%, #0d2440 100%);
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+
+      .story .brand {
+        position: absolute;
+        top: 28px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(7,20,35,0.7);
+        border: 1px solid rgba(255,255,255,0.35);
+        padding: 0.35rem 0.85rem;
+        border-radius: 999px;
+        font-size: clamp(16px, 2.1vw, 20px);
+        font-weight: 800;
+        letter-spacing: 0.02em;
+      }
+
+      .story .brand span { color: var(--accent); }
+
+      .story .content {
+        position: absolute;
+        inset: 0;
+        padding: clamp(16px, 3vw, 28px);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .story .kicker {
+        margin-top: 92px;
+        font-size: clamp(13px, 1.8vw, 18px);
+        font-weight: 700;
+        color: var(--mint);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .story h2 {
+        margin: 0.45rem 0 0;
+        font-size: clamp(26px, 4vw, 54px);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+      }
+
+      .story p {
+        margin: 0.7rem 0 0;
+        font-size: clamp(15px, 2.1vw, 30px);
+        color: #e9f0fb;
+        line-height: 1.35;
+      }
+
+      .chip {
+        display: inline-block;
+        margin-top: 0.8rem;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.35);
+        border-radius: 14px;
+        padding: 0.4rem 0.7rem;
+        font-size: clamp(14px, 1.9vw, 24px);
+        font-weight: 700;
+      }
+
+      .story .footer {
+        margin-top: auto;
+        background: rgba(7,20,35,0.64);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 14px;
+        padding: 0.55rem 0.75rem;
+        font-size: clamp(13px, 1.7vw, 22px);
+        line-height: 1.4;
+      }
+
+      .story-text {
+        display: none;
+      }
+
+      body.single .top,
+      body.single .story-wrap:not(.focus) {
+        display: none;
+      }
+
+      body.single {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      body.single .story-wrap.focus {
+        width: min(100vw, 430px);
+        background: transparent;
+        border: none;
+        padding: 0;
+      }
+
+      body.single .story {
+        border-radius: 0;
+        border: none;
+        width: 100vw;
+        max-width: 430px;
+        height: 100vh;
+        max-height: 860px;
+      }
+
+      @media (max-width: 640px) {
+        .list { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="topbar">
+        <a class="home-link" href="/">← Башкы бетке кайтуу</a>
+      </div>
+      <h1>Instagram Highlights үчүн даяр story шаблондор</h1>
+      <p class="lead">
+        Бул бетте 9:16 форматтагы story макеттер бар. «Бирөө гана» баскычы менен бир шаблонду өзүнчө ачып скриншот кыла аласыз. «Текстти көчүрүү» баскычы caption/overlay үчүн тез көчүрөт.
+      </p>
+    </header>
+
+    <main class="list" id="stories">
+      <article class="story-wrap" data-id="cover">
+        <div class="story-head">
+          <h3 class="story-title">1) Cover — Highlights мукабасы</h3>
+          <div class="story-actions">
+            <a class="btn" href="?story=cover">Бирөө гана</a>
+            <button class="btn copy" data-copy="cover-text">Текстти көчүрүү</button>
+          </div>
+        </div>
+        <section class="story">
+          <div class="brand">MEGA <span>KIDS</span></div>
+          <div class="content">
+            <div class="kicker">БАТКЕН • «МЕГА» ИМАРАТЫ</div>
+            <h2>Балдардын модасы жана стили</h2>
+            <p>Балдарга стиль, ата-энелерге ишеним.</p>
+            <span class="chip">0–12 жаш • кийим • аксессуарлар</span>
+            <div class="footer">@mega_kids_batken • +996 776 66 85 80</div>
+          </div>
+        </section>
+        <textarea id="cover-text" class="story-text">Mega Kids Баткен — балдардын модасы жана стили. 0–12 жашка чейинки балдар үчүн кийим жана аксессуарлар.</textarea>
+      </article>
+
+      <article class="story-wrap" data-id="address">
+        <div class="story-head">
+          <h3 class="story-title">2) Дарек</h3>
+          <div class="story-actions">
+            <a class="btn" href="?story=address">Бирөө гана</a>
+            <button class="btn copy" data-copy="address-text">Текстти көчүрүү</button>
+          </div>
+        </div>
+        <section class="story">
+          <div class="brand">MEGA <span>KIDS</span></div>
+          <div class="content">
+            <div class="kicker">КАНТИП ТАПСА БОЛОТ?</div>
+            <h2>Дарегибиз</h2>
+            <p><strong>Баткен ш., Самат Садыков көчөсү, 50</strong></p>
+            <p>«Мега» имаратынын ичинде.</p>
+            <span class="chip">Локацияны Instagram био'дон ачыңыз</span>
+            <div class="footer">Mega Kids • Баткен</div>
+          </div>
+        </section>
+        <textarea id="address-text" class="story-text">Дарегибиз: Баткен ш., Самат Садыков көчөсү, 50. «Мега» имаратынын ичинде.</textarea>
+      </article>
+
+      <article class="story-wrap" data-id="hours">
+        <div class="story-head">
+          <h3 class="story-title">3) Иштөө сааты</h3>
+          <div class="story-actions">
+            <a class="btn" href="?story=hours">Бирөө гана</a>
+            <button class="btn copy" data-copy="hours-text">Текстти көчүрүү</button>
+          </div>
+        </div>
+        <section class="story">
+          <div class="brand">MEGA <span>KIDS</span></div>
+          <div class="content">
+            <div class="kicker">ИШТӨӨ УБАКТЫСЫ</div>
+            <h2>23:00 чейин ачык</h2>
+            <p>Күн сайын сиздерди күтөбүз.</p>
+            <span class="chip">Кечке чейин соодага ыңгайлуу</span>
+            <div class="footer">Суроо болсо: +996 776 66 85 80</div>
+          </div>
+        </section>
+        <textarea id="hours-text" class="story-text">Иштөө саатыбыз: күн сайын 23:00 чейин ачык.</textarea>
+      </article>
+
+      <article class="story-wrap" data-id="categories">
+        <div class="story-head">
+          <h3 class="story-title">4) Категориялар</h3>
+          <div class="story-actions">
+            <a class="btn" href="?story=categories">Бирөө гана</a>
+            <button class="btn copy" data-copy="categories-text">Текстти көчүрүү</button>
+          </div>
+        </div>
+        <section class="story">
+          <div class="brand">MEGA <span>KIDS</span></div>
+          <div class="content">
+            <div class="kicker">ЭМНЕ САТАБЫЗ</div>
+            <h2>Кийим • Бут кийим • Аксессуарлар</h2>
+            <p>Ар бир жашка жана сезонго ылайык тандоолор.</p>
+            <span class="chip">0–12 жаш</span>
+            <div class="footer">Жаңы коллекциялар дайыма жаңырып турат.</div>
+          </div>
+        </section>
+        <textarea id="categories-text" class="story-text">Кийим, бут кийим жана аксессуарлар. 0–12 жашка ылайык чоң тандоо.</textarea>
+      </article>
+
+      <article class="story-wrap" data-id="quality">
+        <div class="story-head">
+          <h3 class="story-title">5) Сапат жана стиль</h3>
+          <div class="story-actions">
+            <a class="btn" href="?story=quality">Бирөө гана</a>
+            <button class="btn copy" data-copy="quality-text">Текстти көчүрүү</button>
+          </div>
+        </div>
+        <section class="story">
+          <div class="brand">MEGA <span>KIDS</span></div>
+          <div class="content">
+            <div class="kicker">ЭМНЕ ҮЧҮН MEGA KIDS?</div>
+            <h2>Стилдүү коллекциялар, жогорку сапат</h2>
+            <p>Күнүмдүк кийүүгө ыңгайлуу жана балдарга жайлуу моделдер.</p>
+            <span class="chip">Сапат + Ыңгайлуулук + Стиль</span>
+            <div class="footer">Балдарга стиль, ата-энелерге ишеним.</div>
+          </div>
+        </section>
+        <textarea id="quality-text" class="story-text">Стилдүү коллекциялар жана жогорку сапат. Балдарга жайлуу, ата-энелерге ишенимдүү тандоо.</textarea>
+      </article>
+
+      <article class="story-wrap" data-id="contact">
+        <div class="story-head">
+          <h3 class="story-title">6) Байланыш</h3>
+          <div class="story-actions">
+            <a class="btn" href="?story=contact">Бирөө гана</a>
+            <button class="btn copy" data-copy="contact-text">Текстти көчүрүү</button>
+          </div>
+        </div>
+        <section class="story">
+          <div class="brand">MEGA <span>KIDS</span></div>
+          <div class="content">
+            <div class="kicker">БАЙЛАНЫШ</div>
+            <h2>+996 776 66 85 80</h2>
+            <p>Чалуу же WhatsApp аркылуу жазыңыз.</p>
+            <span class="chip">Instagram: @mega_kids_batken</span>
+            <div class="footer">Суроолоруңуз болсо дароо жооп беребиз.</div>
+          </div>
+        </section>
+        <textarea id="contact-text" class="story-text">Байланыш: +996 776 66 85 80. Instagram: @mega_kids_batken</textarea>
+      </article>
+
+      <article class="story-wrap" data-id="new">
+        <div class="story-head">
+          <h3 class="story-title">7) Жаңы коллекция</h3>
+          <div class="story-actions">
+            <a class="btn" href="?story=new">Бирөө гана</a>
+            <button class="btn copy" data-copy="new-text">Текстти көчүрүү</button>
+          </div>
+        </div>
+        <section class="story">
+          <div class="brand">MEGA <span>KIDS</span></div>
+          <div class="content">
+            <div class="kicker">ЖАҢЫ КОЛЛЕКЦИЯ</div>
+            <h2>Апта сайын жаңы моделдер</h2>
+            <p>Жаш топторуна ылайык жаңы түшкөн товарларды карап туруңуз.</p>
+            <span class="chip">Highlights: «Жаңы»</span>
+            <div class="footer">Профилди ээрчип, жаңылыкты өткөрбөңүз.</div>
+          </div>
+        </section>
+        <textarea id="new-text" class="story-text">Жаңы коллекция келди. Апта сайын жаңы моделдерди жайгаштырабыз.</textarea>
+      </article>
+
+      <article class="story-wrap" data-id="faq">
+        <div class="story-head">
+          <h3 class="story-title">8) Жиі берилген суроолор</h3>
+          <div class="story-actions">
+            <a class="btn" href="?story=faq">Бирөө гана</a>
+            <button class="btn copy" data-copy="faq-text">Текстти көчүрүү</button>
+          </div>
+        </div>
+        <section class="story">
+          <div class="brand">MEGA <span>KIDS</span></div>
+          <div class="content">
+            <div class="kicker">КӨП БЕРИЛГЕН СУРООЛОР</div>
+            <h2>Өлчөм барбы? Алмаштырасыздарбы?</h2>
+            <p>Түз дүкөнгө келип тандасаңыз эң ыңгайлуу. Кеңеш беребиз.</p>
+            <span class="chip">0–12 жаш өлчөмдөрү</span>
+            <div class="footer">Толук маалымат үчүн DM же чалуу.</div>
+          </div>
+        </section>
+        <textarea id="faq-text" class="story-text">Өлчөмдөр жана товар боюнча суроолор болсо DM жазыңыз же +996 776 66 85 80.</textarea>
+      </article>
+
+      <article class="story-wrap" data-id="cta">
+        <div class="story-head">
+          <h3 class="story-title">9) Чакыруу (CTA)</h3>
+          <div class="story-actions">
+            <a class="btn" href="?story=cta">Бирөө гана</a>
+            <button class="btn copy" data-copy="cta-text">Текстти көчүрүү</button>
+          </div>
+        </div>
+        <section class="story">
+          <div class="brand">MEGA <span>KIDS</span></div>
+          <div class="content">
+            <div class="kicker">КҮТӨБҮЗ</div>
+            <h2>Бүгүн келип көрүңүз</h2>
+            <p>Баткен, Самат Садыков 50 • «Мега» имараты</p>
+            <span class="chip">23:00 чейин ачык</span>
+            <div class="footer">@mega_kids_batken • +996 776 66 85 80</div>
+          </div>
+        </section>
+        <textarea id="cta-text" class="story-text">Бүгүн келип көрүңүз: Баткен, Самат Садыков 50 («Мега»). 23:00 чейин ачык.</textarea>
+      </article>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const selected = params.get("story");
+      if (selected) {
+        document.body.classList.add("single");
+        const target = document.querySelector(`.story-wrap[data-id="${selected}"]`);
+        if (target) {
+          target.classList.add("focus");
+        } else {
+          document.body.classList.remove("single");
+        }
+      }
+
+      document.querySelectorAll(".copy").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const id = btn.getAttribute("data-copy");
+          const ta = document.getElementById(id);
+          if (!ta) return;
+          const text = ta.value;
+          try {
+            await navigator.clipboard.writeText(text);
+            const prev = btn.textContent;
+            btn.textContent = "Көчүрүлдү";
+            setTimeout(() => (btn.textContent = prev), 1300);
+          } catch {
+            ta.style.display = "block";
+            ta.select();
+            document.execCommand("copy");
+            ta.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

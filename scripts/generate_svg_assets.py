@@ -222,6 +222,38 @@ def main() -> None:
     )
     w("price-tag-generic.svg", tag)
 
+    facebook = svg_wrap(
+        "Facebook / link preview 1200x630",
+        f"""<defs>
+    <style type="text/css"><![CDATA[
+{FONT_IMPORT}
+{STYLE_T}
+      .xl {{ font-weight: 800; font-size: 88px; }}
+      .md {{ font-weight: 700; font-size: 34px; fill: #4a5568; }}
+      .sm {{ font-weight: 600; font-size: 28px; fill: #0f1419; }}
+      .acc {{ fill: #e85d4c; font-weight: 800; }}
+    ]]></style>
+    <linearGradient id="fb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#faf8f5"/>
+      <stop offset="1" stop-color="#ebe4d9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#fb)"/>
+  <rect x="0" y="0" width="20" height="630" fill="#e85d4c"/>
+  <text x="60" y="160" class="t xl" fill="#0f1419">Mega</text>
+  <text x="280" y="160" class="t xl acc">Kids</text>
+  <text x="60" y="240" class="t md">{k["banner_sub"]}</text>
+  <text x="60" y="310" class="t sm">{k["mega_building_caption"]}</text>
+  <text x="60" y="380" class="t sm acc">{k["open_exc"]}</text>
+  <text x="60" y="460" class="t sm">{k["samat_addr"]} \u00b7 {k["hours_open"]}</text>
+  <text x="60" y="520" class="t sm acc">@mega_kids_batken</text>
+  <text x="60" y="575" class="t sm">+996 776 66 85 80</text>""",
+        "0 0 1200 630",
+        1200,
+        630,
+    )
+    w("facebook-1200x630.svg", facebook)
+
 
 if __name__ == "__main__":
     main()

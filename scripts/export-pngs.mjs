@@ -16,6 +16,7 @@ const jobs = [
   ["instagram-1080x1920-story.svg", "instagram-1080x1920-story.png", 1080],
   ["sticker-hours.svg", "sticker-hours.png", 2000],
   ["price-tag-generic.svg", "price-tag-generic.png", 960],
+  ["facebook-1200x630.svg", "facebook-1200x630.png", 1200],
 ];
 
 for (const [svgName, pngName, width] of jobs) {

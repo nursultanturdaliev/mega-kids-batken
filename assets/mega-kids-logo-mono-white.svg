@@ -7,11 +7,11 @@
 ]]></style></defs>
   <rect width="420" height="120" fill="#0f1419"/>
   <rect x="6" y="12" width="408" height="70" rx="24" fill="none" stroke="#ffffff" stroke-width="3"/>
-  <rect x="164" y="78" width="92" height="10" fill="#0f1419"/>
-  <rect x="138" y="82" width="144" height="34" rx="11" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <rect x="164" y="80" width="92" height="12" fill="#0f1419"/>
+  <rect x="138" y="90" width="144" height="24" rx="10" fill="none" stroke="#ffffff" stroke-width="3"/>
   <text x="52" y="58" class="t" font-weight="800" font-size="50" fill="#ffffff">MEGA</text>
   <text x="222" y="58" class="t" font-weight="800" font-size="50" fill="#ffffff">KIDS</text>
-  <text x="210" y="100" text-anchor="middle" class="t" font-weight="800" font-size="34" fill="#ffffff">БАТКЕН</text>
+  <text x="210" y="109" text-anchor="middle" class="t" font-weight="800" font-size="34" fill="#ffffff">БАТКЕН</text>
   <text x="192" y="30" class="t" font-size="18" font-weight="700" fill="#ffffff">★</text>
   <text x="255" y="30" class="t" font-size="18" font-weight="700" fill="#ffffff">❤</text>
 </svg>

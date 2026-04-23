@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
 SRC = ASSETS / "reference-source.png"
-LOGO = ASSETS / "logo-from-banner.png"
+LOGO = ASSETS / "mega-kids-logo.png"
 
 FONT_REG = "/System/Library/Fonts/Supplemental/Arial Unicode.ttf"
 FONT_BOLD = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"

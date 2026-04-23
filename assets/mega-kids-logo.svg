@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="72" viewBox="0 0 300 72" role="img" aria-labelledby="t">
+  <title id="t">Mega Kids logo</title>
+  <defs><style type="text/css"><![CDATA[
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap");
+.t { font-family: Manrope, "DejaVu Sans", Arial, sans-serif; }
+]]></style></defs>
+  <rect x="4" y="8" width="56" height="56" rx="14" fill="#e85d4c"/>
+  <text x="32" y="49" text-anchor="middle" class="t" fill="#ffffff" font-weight="800" font-size="28">M</text>
+  <text x="76" y="50" class="t" font-weight="800" font-size="34" fill="#0f1419">Mega</text>
+  <text x="178" y="50" class="t" font-weight="800" font-size="34" fill="#e85d4c">Kids</text>
+</svg>

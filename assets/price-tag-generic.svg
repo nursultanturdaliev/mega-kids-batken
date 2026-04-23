@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="200" viewBox="0 0 480 200" role="img" aria-labelledby="t">
+  <title id="t">Shelf label template</title>
+  <defs><style type="text/css"><![CDATA[
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap");
+.t { font-family: Manrope, "DejaVu Sans", Arial, sans-serif; }
+    ]]></style></defs>
+  <rect width="480" height="200" rx="16" fill="#ffffff" stroke="#e85d4c" stroke-width="6"/>
+  <text x="240" y="95" text-anchor="middle" class="t" fill="#0f1419" font-weight="800" font-size="36">Жаңы коллекция</text>
+  <text x="240" y="155" text-anchor="middle" class="t" fill="#718096" font-weight="700" font-size="28">0–12 жаш · Mega Kids</text>
+</svg>

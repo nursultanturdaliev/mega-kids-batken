@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360" role="img" aria-labelledby="t">
+  <title id="t">Door hours sticker</title>
+  <defs><style type="text/css"><![CDATA[
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap");
+.t { font-family: Manrope, "DejaVu Sans", Arial, sans-serif; }
+    ]]></style></defs>
+  <rect width="800" height="360" rx="24" fill="#0f1419"/>
+  <text x="400" y="200" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="110">23:00</text>
+  <text x="400" y="280" text-anchor="middle" class="t" fill="#e85d4c" font-weight="700" font-size="44">чейин ачык</text>
+  <text x="400" y="330" text-anchor="middle" class="t" fill="#a0aec0" font-weight="600" font-size="26">Mega Kids · Баткен</text>
+</svg>

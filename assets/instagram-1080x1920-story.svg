@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="t">
+  <title id="t">Instagram story 1080x1920</title>
+  <defs>
+    <style type="text/css"><![CDATA[
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap");
+.t { font-family: Manrope, "DejaVu Sans", Arial, sans-serif; }
+    ]]></style>
+    <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1419"/>
+      <stop offset="0.45" stop-color="#1a2332"/>
+      <stop offset="1" stop-color="#e85d4c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#sg)"/>
+  <text x="540" y="520" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="80">Mega Kids</text>
+  <text x="540" y="620" text-anchor="middle" class="t" fill="#fbd5cf" font-weight="600" font-size="36">Баткен · «Мега»</text>
+  <text x="540" y="900" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="96">Ачылды!</text>
+  <text x="540" y="1040" text-anchor="middle" class="t" fill="#fff" font-weight="600" font-size="38">0–12 жаш · кийим жана аксессуарлар</text>
+  <text x="540" y="1180" text-anchor="middle" class="t" fill="#fff" font-weight="600" font-size="34">Самат Садыков 50 · 23:00 чейин</text>
+  <text x="540" y="1380" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="42">@mega_kids_batken</text>
+  <text x="540" y="1480" text-anchor="middle" class="t" fill="#fff" font-weight="700" font-size="36">+996 776 66 85 80</text>
+  <text x="540" y="1750" text-anchor="middle" class="t" fill="#ffffff" font-weight="600" font-size="28" opacity="0.85">Stories: төмөн/үстүн боштук</text>
+</svg>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="t">
+  <title id="t">Instagram post 1080x1350</title>
+  <defs>
+    <style type="text/css"><![CDATA[
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap");
+.t { font-family: Manrope, "DejaVu Sans", Arial, sans-serif; }
+    ]]></style>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf8f5"/>
+      <stop offset="1" stop-color="#f0ebe3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <rect width="1080" height="240" fill="#e85d4c"/>
+  <text x="540" y="125" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="72">Mega Kids</text>
+  <text x="540" y="195" text-anchor="middle" class="t" fill="#fff" font-weight="600" font-size="32">Баткен · «Мега» имараты</text>
+  <rect x="120" y="300" width="840" height="120" rx="20" fill="#e85d4c"/>
+  <text x="540" y="385" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="52">Ачылды!</text>
+  <text x="540" y="520" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="36">0–12 жашка чейинки балдар үчүн</text>
+  <text x="540" y="580" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="36">кийим жана аксессуарлар</text>
+  <text x="540" y="700" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="32">Самат Садыков к., 50</text>
+  <text x="540" y="760" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="32">«Мега» имараты · 23:00 чейин ачык</text>
+  <text x="540" y="920" text-anchor="middle" class="t" fill="#e85d4c" font-weight="800" font-size="38">@mega_kids_batken</text>
+  <text x="540" y="990" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="34">+996 776 66 85 80</text>
+  <text x="540" y="1180" text-anchor="middle" class="t" fill="#a0aec0" font-size="26">#MegaKids #Баткен #БалдарКийими</text>
+</svg>

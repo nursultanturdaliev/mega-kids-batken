@@ -1,0 +1,11 @@
+{
+  "name": "mega-kids-batken",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/generate_svg_assets.py && node scripts/export-pngs.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

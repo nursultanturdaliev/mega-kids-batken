@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-labelledby="t">
+  <title id="t">Instagram square 1080</title>
+  <defs><style type="text/css"><![CDATA[
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap");
+.t { font-family: Manrope, "DejaVu Sans", Arial, sans-serif; }
+    ]]></style></defs>
+  <rect width="1080" height="1080" fill="#faf8f5"/>
+  <circle cx="540" cy="380" r="160" fill="#e85d4c"/>
+  <text x="540" y="405" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="120">M</text>
+  <text x="540" y="620" text-anchor="middle" class="t" fill="#0f1419" font-weight="800" font-size="68">Mega Kids</text>
+  <text x="540" y="700" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="34">0–12 жаш · кийим жана аксессуарлар</text>
+  <text x="540" y="780" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="30">«Мега» · Самат Садыков 50, Баткен</text>
+  <text x="540" y="860" text-anchor="middle" class="t" fill="#e85d4c" font-weight="800" font-size="36">@mega_kids_batken</text>
+  <text x="540" y="920" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="32">23:00 чейин · +996 776 66 85 80</text>
+</svg>

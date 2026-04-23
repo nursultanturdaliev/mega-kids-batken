@@ -34,13 +34,16 @@ def main() -> None:
 {FONT_IMPORT}
 {STYLE_T}
 ]]></style></defs>
-  <rect x="4" y="8" width="56" height="56" rx="14" fill="#e85d4c"/>
-  <text x="32" y="49" text-anchor="middle" class="t" fill="#ffffff" font-weight="800" font-size="28">M</text>
-  <text x="76" y="50" class="t" font-weight="800" font-size="34" fill="#0f1419">Mega</text>
-  <text x="178" y="50" class="t" font-weight="800" font-size="34" fill="#e85d4c">Kids</text>""",
-        "0 0 300 72",
-        300,
-        72,
+  <rect x="6" y="12" width="408" height="70" rx="24" fill="#12365d" stroke="#8fb4dc" stroke-width="3"/>
+  <rect x="140" y="74" width="140" height="34" rx="12" fill="#12365d" stroke="#8fb4dc" stroke-width="3"/>
+  <text x="52" y="58" class="t" font-weight="800" font-size="50" fill="#9de8da">MEGA</text>
+  <text x="222" y="58" class="t" font-weight="800" font-size="50" fill="#ff7a5f">KIDS</text>
+  <text x="210" y="100" text-anchor="middle" class="t" font-weight="800" font-size="34" fill="#ffffff">БАТКЕН</text>
+  <text x="192" y="30" class="t" font-size="18" font-weight="700" fill="#98ebe0">★</text>
+  <text x="255" y="30" class="t" font-size="18" font-weight="700" fill="#ff7a5f">❤</text>""",
+        "0 0 420 120",
+        420,
+        120,
     )
     w("mega-kids-logo.svg", logo)
 
@@ -50,13 +53,16 @@ def main() -> None:
 {FONT_IMPORT}
 {STYLE_T}
 ]]></style></defs>
-  <rect x="4" y="8" width="56" height="56" rx="14" fill="#0f1419"/>
-  <text x="32" y="49" text-anchor="middle" class="t" fill="#ffffff" font-weight="800" font-size="28">M</text>
-  <text x="76" y="50" class="t" font-weight="800" font-size="34" fill="#0f1419">Mega</text>
-  <text x="178" y="50" class="t" font-weight="800" font-size="34" fill="#0f1419">Kids</text>""",
-        "0 0 300 72",
-        300,
-        72,
+  <rect x="6" y="12" width="408" height="70" rx="24" fill="#0f1419" stroke="#0f1419" stroke-width="3"/>
+  <rect x="140" y="74" width="140" height="34" rx="12" fill="#0f1419" stroke="#0f1419" stroke-width="3"/>
+  <text x="52" y="58" class="t" font-weight="800" font-size="50" fill="#0f1419">MEGA</text>
+  <text x="222" y="58" class="t" font-weight="800" font-size="50" fill="#0f1419">KIDS</text>
+  <text x="210" y="100" text-anchor="middle" class="t" font-weight="800" font-size="34" fill="#0f1419">БАТКЕН</text>
+  <text x="192" y="30" class="t" font-size="18" font-weight="700" fill="#0f1419">★</text>
+  <text x="255" y="30" class="t" font-size="18" font-weight="700" fill="#0f1419">❤</text>""",
+        "0 0 420 120",
+        420,
+        120,
     )
     w("mega-kids-logo-mono-black.svg", mono_b)
 
@@ -66,14 +72,17 @@ def main() -> None:
 {FONT_IMPORT}
 {STYLE_T}
 ]]></style></defs>
-  <rect width="300" height="72" fill="#0f1419"/>
-  <rect x="4" y="8" width="56" height="56" rx="14" fill="#ffffff"/>
-  <text x="32" y="49" text-anchor="middle" class="t" fill="#0f1419" font-weight="800" font-size="28">M</text>
-  <text x="76" y="50" class="t" font-weight="800" font-size="34" fill="#ffffff">Mega</text>
-  <text x="178" y="50" class="t" font-weight="800" font-size="34" fill="#ffffff">Kids</text>""",
-        "0 0 300 72",
-        300,
-        72,
+  <rect width="420" height="120" fill="#0f1419"/>
+  <rect x="6" y="12" width="408" height="70" rx="24" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <rect x="140" y="74" width="140" height="34" rx="12" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <text x="52" y="58" class="t" font-weight="800" font-size="50" fill="#ffffff">MEGA</text>
+  <text x="222" y="58" class="t" font-weight="800" font-size="50" fill="#ffffff">KIDS</text>
+  <text x="210" y="100" text-anchor="middle" class="t" font-weight="800" font-size="34" fill="#ffffff">БАТКЕН</text>
+  <text x="192" y="30" class="t" font-size="18" font-weight="700" fill="#ffffff">★</text>
+  <text x="255" y="30" class="t" font-size="18" font-weight="700" fill="#ffffff">❤</text>""",
+        "0 0 420 120",
+        420,
+        120,
     )
     w("mega-kids-logo-mono-white.svg", mono_w)
 

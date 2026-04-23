@@ -9,6 +9,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
 SRC = ASSETS / "reference-source.png"
+LOGO = ASSETS / "mega-kids-logo.png"
 
 FONT_REG = "/System/Library/Fonts/Supplemental/Arial Unicode.ttf"
 FONT_BOLD = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
@@ -31,11 +32,19 @@ def kids_strip(base: Image.Image, target_w: int) -> Image.Image:
     return ImageOps.contain(crop, (target_w, int(target_w * 0.55)))
 
 
-def add_brand(draw: ImageDraw.ImageDraw, width: int):
-    rr(draw, (width // 2 - 260, 36, width // 2 + 260, 170), 34, (17, 45, 78, 235), (220, 235, 255, 220), 4)
-    draw.text((width // 2 - 160, 68), "MEGA", font=fnt(66, True), fill=(126, 238, 210))
-    draw.text((width // 2 + 20, 68), "KIDS", font=fnt(66, True), fill=(255, 120, 94))
-    draw.text((width // 2 - 60, 130), "БАТКЕН", font=fnt(48, True), fill=(240, 250, 255))
+def add_brand(canvas: Image.Image, width: int, top: int = 36):
+    if LOGO.exists():
+        mark = Image.open(LOGO).convert("RGBA")
+        target_w = min(int(width * 0.52), 520)
+        mark = ImageOps.contain(mark, (target_w, int(target_w * 0.32)))
+        x = width // 2 - mark.width // 2
+        canvas.alpha_composite(mark, (x, top))
+    else:
+        draw = ImageDraw.Draw(canvas)
+        rr(draw, (width // 2 - 260, top, width // 2 + 260, top + 134), 34, (17, 45, 78, 235), (220, 235, 255, 220), 4)
+        draw.text((width // 2 - 160, top + 32), "MEGA", font=fnt(66, True), fill=(126, 238, 210))
+        draw.text((width // 2 + 20, top + 32), "KIDS", font=fnt(66, True), fill=(255, 120, 94))
+        draw.text((width // 2 - 60, top + 94), "БАТКЕН", font=fnt(48, True), fill=(240, 250, 255))
 
 
 def footer(draw: ImageDraw.ImageDraw, w: int, h: int, small: bool = False):
@@ -56,7 +65,7 @@ def main():
     w, h = 1920, 1080
     can = Image.new("RGBA", (w, h), (26, 63, 105, 255))
     d = ImageDraw.Draw(can)
-    add_brand(d, w)
+    add_brand(can, w)
     d.text((w // 2 - 430, 220), "БАЛДАР МОДАСЫ ЖАНА СТИЛЬ", font=fnt(68, True), fill=(245, 250, 255))
     d.text((w // 2 - 425, 290), "КИЧИНЕКЕЙЛЕР ҮЧҮН МЫКТЫ ТАНДОО", font=fnt(52, True), fill=(245, 250, 255))
     rr(d, (80, 410, 600, 560), 38, (232, 244, 255, 235), (214, 230, 244), 4)
@@ -74,7 +83,7 @@ def main():
     w, h = 1080, 1350
     can = Image.new("RGBA", (w, h), (28, 63, 104, 255))
     d = ImageDraw.Draw(can)
-    add_brand(d, w)
+    add_brand(can, w)
     rr(d, (70, 220, 1010, 370), 32, (232, 244, 255, 235), (214, 230, 244), 4)
     d.text((220, 272), "АЧЫЛДЫ!", font=fnt(74, True), fill=(228, 78, 55))
     d.text((130, 395), "0–12 жашка чейин кийим жана аксессуарлар", font=fnt(40, True), fill=(243, 250, 255))
@@ -87,7 +96,7 @@ def main():
     w = h = 1080
     can = Image.new("RGBA", (w, h), (28, 63, 104, 255))
     d = ImageDraw.Draw(can)
-    add_brand(d, w)
+    add_brand(can, w)
     d.text((145, 220), "АЧЫЛДЫ! 0–12 жаш", font=fnt(64, True), fill=(255, 235, 232))
     strip = kids_strip(base, 780)
     can.alpha_composite(strip, (150, 360))
@@ -100,7 +109,7 @@ def main():
     w, h = 1080, 1920
     can = Image.new("RGBA", (w, h), (20, 42, 72, 255))
     d = ImageDraw.Draw(can)
-    add_brand(d, w)
+    add_brand(can, w)
     d.text((160, 240), "Mega Kids Баткен", font=fnt(70, True), fill=(237, 246, 255))
     d.text((130, 330), "Балдар мода жана стиль", font=fnt(52, True), fill=(237, 246, 255))
     strip = kids_strip(base, 950)
@@ -116,7 +125,7 @@ def main():
     w, h = 1200, 630
     can = Image.new("RGBA", (w, h), (29, 64, 106, 255))
     d = ImageDraw.Draw(can)
-    add_brand(d, w)
+    add_brand(can, w)
     d.text((130, 220), "АЧЫЛДЫ! Балдар кийими 0–12", font=fnt(56, True), fill=(243, 251, 255))
     strip = kids_strip(base, 600)
     can.alpha_composite(strip, (560, 250))

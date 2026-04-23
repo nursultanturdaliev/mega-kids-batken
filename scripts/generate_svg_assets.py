@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""Writes all marketing SVGs as UTF-8 (Kyrgyz + Latin)."""
+"""Writes marketing SVGs as UTF-8. Kyrgyz strings load from ky_strings.json (ASCII \\u escapes)."""
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent / "assets"
+KY = json.loads((Path(__file__).parent / "ky_strings.json").read_text(encoding="utf-8"))
 
 FONT_IMPORT = """@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap");"""
-
 STYLE_T = """.t { font-family: Manrope, "DejaVu Sans", Arial, sans-serif; }"""
 
 
 def w(name: str, body: str) -> None:
+    ROOT.mkdir(parents=True, exist_ok=True)
     p = ROOT / name
     p.write_text(body.strip() + "\n", encoding="utf-8")
     print("wrote", p)
@@ -25,7 +26,7 @@ def svg_wrap(title: str, inner: str, wvb: str, width: int, height: int) -> str:
 
 
 def main() -> None:
-    ROOT.mkdir(parents=True, exist_ok=True)
+    k = KY
 
     logo = svg_wrap(
         "Mega Kids logo",
@@ -96,13 +97,13 @@ def main() -> None:
   <rect x="0" y="0" width="28" height="1200" fill="#e85d4c"/>
   <text x="100" y="220" class="t h1" fill="#0f1419">Mega</text>
   <text x="420" y="220" class="t h1 accent">Kids</text>
-  <text x="100" y="320" class="t h2">0\u201312 жашка чейинки балдар үчүн кийим жана аксессуарлар</text>
-  <text x="100" y="400" class="t h2">\u00abМега\u00bb имаратындагы балдар кийими \u00b7 Баткен</text>
-  <text x="100" y="500" class="t h1 accent">Ачылды!</text>
+  <text x="100" y="320" class="t h2">{k["banner_sub"]}</text>
+  <text x="100" y="400" class="t h2">{k["mega_line_long"]}</text>
+  <text x="100" y="500" class="t h1 accent">{k["open_exc"]}</text>
   <rect x="2200" y="140" width="1280" height="920" rx="28" fill="#ffffff" stroke="#e8e3db" stroke-width="4"/>
-  <text x="2340" y="280" class="t box">23:00 чейин ачык</text>
-  <text x="2340" y="380" class="t box">Самат Садыков к., 50</text>
-  <text x="2340" y="480" class="t box">\u00abМега\u00bb имараты</text>
+  <text x="2340" y="280" class="t box">{k["hours_open"]}</text>
+  <text x="2340" y="380" class="t box">{k["samat_addr"]}</text>
+  <text x="2340" y="480" class="t box">{k["mega_building"]}</text>
   <text x="2340" y="620" class="t box accent">@mega_kids_batken</text>
   <text x="2340" y="720" class="t box">+996 776 66 85 80</text>""",
         "0 0 3600 1200",
@@ -126,16 +127,16 @@ def main() -> None:
   <rect width="1080" height="1350" fill="url(#bg)"/>
   <rect width="1080" height="240" fill="#e85d4c"/>
   <text x="540" y="125" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="72">Mega Kids</text>
-  <text x="540" y="195" text-anchor="middle" class="t" fill="#fff" font-weight="600" font-size="32">Баткен \u00b7 \u00abМега\u00bb имараты</text>
+  <text x="540" y="195" text-anchor="middle" class="t" fill="#fff" font-weight="600" font-size="32">{k["mega_building_caption"]}</text>
   <rect x="120" y="300" width="840" height="120" rx="20" fill="#e85d4c"/>
-  <text x="540" y="385" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="52">Ачылды!</text>
-  <text x="540" y="520" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="36">0\u201312 жашка чейинки балдар үчүн</text>
-  <text x="540" y="580" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="36">кийим жана аксессуарлар</text>
-  <text x="540" y="700" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="32">Самат Садыков к., 50</text>
-  <text x="540" y="760" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="32">\u00abМега\u00bb имараты \u00b7 23:00 чейин ачык</text>
+  <text x="540" y="385" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="52">{k["open_exc"]}</text>
+  <text x="540" y="520" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="36">{k["age_line"]}</text>
+  <text x="540" y="580" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="36">{k["clothing_line"]}</text>
+  <text x="540" y="700" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="32">{k["samat_addr"]}</text>
+  <text x="540" y="760" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="32">{k["mega_hours_line"]}</text>
   <text x="540" y="920" text-anchor="middle" class="t" fill="#e85d4c" font-weight="800" font-size="38">@mega_kids_batken</text>
   <text x="540" y="990" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="34">+996 776 66 85 80</text>
-  <text x="540" y="1180" text-anchor="middle" class="t" fill="#a0aec0" font-size="26">#MegaKids #Баткен #БалдарКийими</text>""",
+  <text x="540" y="1180" text-anchor="middle" class="t" fill="#a0aec0" font-size="26">{k["hashtags"]}</text>""",
         "0 0 1080 1350",
         1080,
         1350,
@@ -152,10 +153,10 @@ def main() -> None:
   <circle cx="540" cy="380" r="160" fill="#e85d4c"/>
   <text x="540" y="405" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="120">M</text>
   <text x="540" y="620" text-anchor="middle" class="t" fill="#0f1419" font-weight="800" font-size="68">Mega Kids</text>
-  <text x="540" y="700" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="34">0\u201312 жаш \u00b7 кийим жана аксессуарлар</text>
-  <text x="540" y="780" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="30">\u00abМега\u00bb \u00b7 Самат Садыков 50, Баткен</text>
+  <text x="540" y="700" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="34">{k["square_age"]}</text>
+  <text x="540" y="780" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="30">{k["square_addr"]}</text>
   <text x="540" y="860" text-anchor="middle" class="t" fill="#e85d4c" font-weight="800" font-size="36">@mega_kids_batken</text>
-  <text x="540" y="920" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="32">23:00 чейин \u00b7 +996 776 66 85 80</text>""",
+  <text x="540" y="920" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="32">{k["square_hours_phone"]}</text>""",
         "0 0 1080 1080",
         1080,
         1080,
@@ -177,13 +178,13 @@ def main() -> None:
   </defs>
   <rect width="1080" height="1920" fill="url(#sg)"/>
   <text x="540" y="520" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="80">Mega Kids</text>
-  <text x="540" y="620" text-anchor="middle" class="t" fill="#fbd5cf" font-weight="600" font-size="36">Баткен \u00b7 \u00abМега\u00bb</text>
-  <text x="540" y="900" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="96">Ачылды!</text>
-  <text x="540" y="1040" text-anchor="middle" class="t" fill="#fff" font-weight="600" font-size="38">0\u201312 жаш \u00b7 кийим жана аксессуарлар</text>
-  <text x="540" y="1180" text-anchor="middle" class="t" fill="#fff" font-weight="600" font-size="34">Самат Садыков 50 \u00b7 23:00 чейин</text>
+  <text x="540" y="620" text-anchor="middle" class="t" fill="#fbd5cf" font-weight="600" font-size="36">{k["story_sub"]}</text>
+  <text x="540" y="900" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="96">{k["open_exc"]}</text>
+  <text x="540" y="1040" text-anchor="middle" class="t" fill="#fff" font-weight="600" font-size="38">{k["story_mid"]}</text>
+  <text x="540" y="1180" text-anchor="middle" class="t" fill="#fff" font-weight="600" font-size="34">{k["story_addr"]}</text>
   <text x="540" y="1380" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="42">@mega_kids_batken</text>
   <text x="540" y="1480" text-anchor="middle" class="t" fill="#fff" font-weight="700" font-size="36">+996 776 66 85 80</text>
-  <text x="540" y="1750" text-anchor="middle" class="t" fill="#ffffff" font-weight="600" font-size="28" opacity="0.85">Stories: төмөн/үстүн боштук</text>""",
+  <text x="540" y="1750" text-anchor="middle" class="t" fill="#ffffff" font-weight="600" font-size="28" opacity="0.85">{k["story_footer"]}</text>""",
         "0 0 1080 1920",
         1080,
         1920,
@@ -198,8 +199,8 @@ def main() -> None:
     ]]></style></defs>
   <rect width="800" height="360" rx="24" fill="#0f1419"/>
   <text x="400" y="200" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="110">23:00</text>
-  <text x="400" y="280" text-anchor="middle" class="t" fill="#e85d4c" font-weight="700" font-size="44">чейин ачык</text>
-  <text x="400" y="330" text-anchor="middle" class="t" fill="#a0aec0" font-weight="600" font-size="26">Mega Kids \u00b7 Баткен</text>""",
+  <text x="400" y="280" text-anchor="middle" class="t" fill="#e85d4c" font-weight="700" font-size="44">{k["hours_until"]}</text>
+  <text x="400" y="330" text-anchor="middle" class="t" fill="#a0aec0" font-weight="600" font-size="26">{k["sticker_footer"]}</text>""",
         "0 0 800 360",
         800,
         360,
@@ -213,8 +214,8 @@ def main() -> None:
 {STYLE_T}
     ]]></style></defs>
   <rect width="480" height="200" rx="16" fill="#ffffff" stroke="#e85d4c" stroke-width="6"/>
-  <text x="240" y="95" text-anchor="middle" class="t" fill="#0f1419" font-weight="800" font-size="36">Жаңы коллекция</text>
-  <text x="240" y="155" text-anchor="middle" class="t" fill="#718096" font-weight="700" font-size="28">0\u201312 жаш \u00b7 Mega Kids</text>""",
+  <text x="240" y="95" text-anchor="middle" class="t" fill="#0f1419" font-weight="800" font-size="36">{k["price_new"]}</text>
+  <text x="240" y="155" text-anchor="middle" class="t" fill="#718096" font-weight="700" font-size="28">{k["price_sub"]}</text>""",
         "0 0 480 200",
         480,
         200,

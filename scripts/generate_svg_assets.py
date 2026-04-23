@@ -35,8 +35,8 @@ def main() -> None:
 {STYLE_T}
 ]]></style></defs>
   <rect x="6" y="12" width="408" height="70" rx="24" fill="#12365d" stroke="#8fb4dc" stroke-width="3"/>
-  <rect x="172" y="76" width="76" height="14" rx="4" fill="#12365d"/>
-  <rect x="138" y="86" width="144" height="30" rx="11" fill="#12365d" stroke="#8fb4dc" stroke-width="3"/>
+  <rect x="164" y="78" width="92" height="10" fill="#12365d"/>
+  <rect x="138" y="82" width="144" height="34" rx="11" fill="#12365d" stroke="#8fb4dc" stroke-width="3"/>
   <text x="52" y="58" class="t" font-weight="800" font-size="50" fill="#9de8da">MEGA</text>
   <text x="222" y="58" class="t" font-weight="800" font-size="50" fill="#ff7a5f">KIDS</text>
   <text x="210" y="100" text-anchor="middle" class="t" font-weight="800" font-size="34" fill="#ffffff">БАТКЕН</text>
@@ -55,8 +55,8 @@ def main() -> None:
 {STYLE_T}
 ]]></style></defs>
   <rect x="6" y="12" width="408" height="70" rx="24" fill="#0f1419" stroke="#0f1419" stroke-width="3"/>
-  <rect x="172" y="76" width="76" height="14" rx="4" fill="#0f1419"/>
-  <rect x="138" y="86" width="144" height="30" rx="11" fill="#0f1419" stroke="#0f1419" stroke-width="3"/>
+  <rect x="164" y="78" width="92" height="10" fill="#0f1419"/>
+  <rect x="138" y="82" width="144" height="34" rx="11" fill="#0f1419" stroke="#0f1419" stroke-width="3"/>
   <text x="52" y="58" class="t" font-weight="800" font-size="50" fill="#0f1419">MEGA</text>
   <text x="222" y="58" class="t" font-weight="800" font-size="50" fill="#0f1419">KIDS</text>
   <text x="210" y="100" text-anchor="middle" class="t" font-weight="800" font-size="34" fill="#0f1419">БАТКЕН</text>
@@ -76,8 +76,8 @@ def main() -> None:
 ]]></style></defs>
   <rect width="420" height="120" fill="#0f1419"/>
   <rect x="6" y="12" width="408" height="70" rx="24" fill="none" stroke="#ffffff" stroke-width="3"/>
-  <rect x="172" y="76" width="76" height="14" rx="4" fill="#0f1419"/>
-  <rect x="138" y="86" width="144" height="30" rx="11" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <rect x="164" y="78" width="92" height="10" fill="#0f1419"/>
+  <rect x="138" y="82" width="144" height="34" rx="11" fill="none" stroke="#ffffff" stroke-width="3"/>
   <text x="52" y="58" class="t" font-weight="800" font-size="50" fill="#ffffff">MEGA</text>
   <text x="222" y="58" class="t" font-weight="800" font-size="50" fill="#ffffff">KIDS</text>
   <text x="210" y="100" text-anchor="middle" class="t" font-weight="800" font-size="34" fill="#ffffff">БАТКЕН</text>

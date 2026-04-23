@@ -3,464 +3,666 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mega Kids — Instagram Highlights</title>
-    <meta name="description" content="Mega Kids үчүн Instagram Highlights story шаблондору: дарек, саат, байланыш жана башка бөлүмдөр." />
+    <title>Mega Kids — Instagram Highlights Studio</title>
+    <meta
+      name="description"
+      content="Mega Kids үчүн профессионал, бирдиктүү Instagram Highlights story шаблондору (9:16)."
+    />
     <style>
       :root {
-        --bg: #0f2139;
-        --panel: #142a47;
-        --text: #f3f7ff;
-        --muted: #c4d1e4;
-        --accent: #ff6e59;
-        --mint: #9be7da;
-        --card: #ffffff;
+        --bg: #f3f6fb;
+        --surface: #ffffff;
+        --ink: #0f1728;
+        --muted: #5d6b82;
+        --line: #d8dfeb;
+        --brand: #ff6f59;
+        --brand-dark: #d95a47;
+        --blue-900: #0e1f37;
+        --blue-800: #133054;
+        --blue-700: #1f4a78;
+        --mint: #b6fff1;
+        --radius: 18px;
+        --shadow: 0 24px 60px rgba(15, 23, 40, 0.12);
       }
 
       * { box-sizing: border-box; }
+
       body {
         margin: 0;
-        font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-        background: linear-gradient(180deg, #0c1a2e 0%, #112947 100%);
-        color: var(--text);
+        font-family: "Inter", "SF Pro Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+        color: var(--ink);
+        background: radial-gradient(circle at 30% -10%, #ffffff 0%, var(--bg) 55%);
       }
+
       a { color: inherit; }
 
-      .top {
-        max-width: 1200px;
+      .page {
+        max-width: 1240px;
         margin: 0 auto;
-        padding: 1.25rem 1rem 0.8rem;
+        padding: 1rem;
       }
 
-      .topbar {
+      .header {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 10px 30px rgba(15, 23, 40, 0.06);
+        padding: 1rem 1.1rem;
         display: flex;
-        gap: 0.8rem;
-        flex-wrap: wrap;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
       }
 
-      .home-link {
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.65rem;
         text-decoration: none;
-        background: rgba(255,255,255,0.12);
-        border: 1px solid rgba(255,255,255,0.2);
-        color: #fff;
-        padding: 0.55rem 0.9rem;
-        border-radius: 999px;
-        font-weight: 700;
-        font-size: 0.9rem;
       }
+
+      .brand-mark {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: linear-gradient(160deg, var(--brand) 0%, #ff8d7c 100%);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+      }
+
+      .brand-name {
+        font-weight: 800;
+        font-size: 1.1rem;
+      }
+
+      .brand-name span { color: var(--brand); }
 
       h1 {
-        margin: 0.2rem 0 0.35rem;
-        font-size: clamp(1.45rem, 3vw, 2rem);
+        margin: 0.45rem 0 0.2rem;
+        font-size: clamp(1.25rem, 2vw, 1.7rem);
+        letter-spacing: -0.02em;
       }
 
       .lead {
         margin: 0;
+        max-width: 70ch;
         color: var(--muted);
-        max-width: 68ch;
-        line-height: 1.55;
+        line-height: 1.5;
+        font-size: 0.95rem;
       }
 
-      .list {
-        max-width: 1300px;
-        margin: 0 auto;
-        padding: 1rem;
-        display: grid;
-        gap: 1.1rem;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      }
-
-      .story-wrap {
-        background: rgba(255,255,255,0.06);
-        border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 16px;
-        padding: 0.7rem;
-      }
-
-      .story-head {
+      .header-actions {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         gap: 0.6rem;
-        margin-bottom: 0.6rem;
-      }
-
-      .story-title {
-        margin: 0;
-        font-size: 0.95rem;
-        font-weight: 800;
-      }
-
-      .story-actions {
-        display: flex;
-        gap: 0.4rem;
         flex-wrap: wrap;
       }
 
       .btn {
-        border: 1px solid rgba(255,255,255,0.25);
-        background: rgba(255,255,255,0.1);
-        color: #fff;
-        border-radius: 999px;
-        padding: 0.34rem 0.64rem;
-        font-size: 0.74rem;
-        font-weight: 700;
-        cursor: pointer;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--ink);
         text-decoration: none;
-      }
-
-      .btn:hover { background: rgba(255,255,255,0.22); }
-
-      .story {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 9/16;
-        border-radius: 18px;
-        overflow: hidden;
-        background: radial-gradient(circle at 75% 8%, rgba(255,255,255,0.1), transparent 40%), linear-gradient(180deg, #20456f 0%, #173458 52%, #0d2440 100%);
-        border: 1px solid rgba(255,255,255,0.2);
-      }
-
-      .story .brand {
-        position: absolute;
-        top: 28px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(7,20,35,0.7);
-        border: 1px solid rgba(255,255,255,0.35);
-        padding: 0.35rem 0.85rem;
         border-radius: 999px;
-        font-size: clamp(16px, 2.1vw, 20px);
-        font-weight: 800;
-        letter-spacing: 0.02em;
+        font-weight: 700;
+        font-size: 0.86rem;
+        padding: 0.52rem 0.92rem;
+        cursor: pointer;
       }
 
-      .story .brand span { color: var(--accent); }
+      .btn:hover { border-color: #b9c5d8; }
 
-      .story .content {
+      .btn-primary {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
+      }
+
+      .btn-primary:hover {
+        background: var(--brand-dark);
+        border-color: var(--brand-dark);
+      }
+
+      .workspace {
+        margin-top: 1rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 340px 1fr;
+      }
+
+      .panel {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 10px 30px rgba(15, 23, 40, 0.06);
+      }
+
+      .stories-list {
+        padding: 0.85rem;
+        max-height: calc(100vh - 190px);
+        overflow: auto;
+      }
+
+      .story-item {
+        width: 100%;
+        border: 1px solid var(--line);
+        background: #fff;
+        border-radius: 14px;
+        text-align: left;
+        padding: 0.65rem 0.75rem;
+        margin: 0 0 0.55rem;
+        cursor: pointer;
+      }
+
+      .story-item:last-child { margin-bottom: 0; }
+
+      .story-item:hover { border-color: #b6c4db; }
+
+      .story-item.active {
+        border-color: rgba(255, 111, 89, 0.55);
+        box-shadow: 0 0 0 2px rgba(255, 111, 89, 0.15) inset;
+      }
+
+      .story-num {
+        font-size: 0.74rem;
+        color: var(--muted);
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+      }
+
+      .story-name {
+        font-size: 0.95rem;
+        font-weight: 800;
+        margin-bottom: 0.15rem;
+      }
+
+      .story-sub {
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+
+      .preview {
+        padding: 1rem;
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+      }
+
+      .preview-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.7rem;
+        flex-wrap: wrap;
+      }
+
+      .preview-title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 800;
+      }
+
+      .preview-help {
+        margin: 0.2rem 0 0;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .preview-actions {
+        display: flex;
+        gap: 0.55rem;
+        flex-wrap: wrap;
+      }
+
+      .stage {
+        display: grid;
+        place-items: center;
+        background: linear-gradient(180deg, #eff4fb 0%, #e8eef8 100%);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        min-height: 760px;
+        padding: 1rem;
+      }
+
+      .story-canvas {
+        width: min(420px, 100%);
+        aspect-ratio: 9/16;
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        position: relative;
+        background: linear-gradient(180deg, var(--blue-700) 0%, var(--blue-800) 56%, var(--blue-900) 100%);
+      }
+
+      .story-canvas::before {
+        content: "";
+        position: absolute;
+        width: 74%;
+        height: 36%;
+        top: -12%;
+        left: -10%;
+        border-radius: 999px;
+        background: radial-gradient(circle, rgba(255,255,255,0.16) 0%, transparent 68%);
+      }
+
+      .story-canvas::after {
+        content: "";
+        position: absolute;
+        width: 55%;
+        height: 22%;
+        bottom: -8%;
+        right: -10%;
+        border-radius: 999px;
+        background: radial-gradient(circle, rgba(255,111,89,0.22) 0%, transparent 68%);
+      }
+
+      .story-inner {
         position: absolute;
         inset: 0;
-        padding: clamp(16px, 3vw, 28px);
+        padding: clamp(20px, 4vw, 30px);
         display: flex;
         flex-direction: column;
+        z-index: 2;
       }
 
-      .story .kicker {
-        margin-top: 92px;
-        font-size: clamp(13px, 1.8vw, 18px);
-        font-weight: 700;
+      .story-logo {
+        align-self: center;
+        background: rgba(10, 23, 40, 0.68);
+        border: 1px solid rgba(255,255,255,0.28);
+        border-radius: 999px;
+        padding: 0.38rem 1rem;
+        font-size: clamp(15px, 1.8vw, 18px);
+        letter-spacing: 0.04em;
+        font-weight: 800;
+        color: #fff;
+      }
+
+      .story-logo span { color: var(--brand); }
+
+      .story-kicker {
+        margin-top: 20%;
         color: var(--mint);
+        letter-spacing: 0.09em;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
+        font-size: clamp(13px, 1.9vw, 17px);
+        font-weight: 700;
       }
 
-      .story h2 {
-        margin: 0.45rem 0 0;
-        font-size: clamp(26px, 4vw, 54px);
+      .story-heading {
+        margin: 0.5rem 0 0;
+        color: #fff;
         line-height: 1.08;
         letter-spacing: -0.02em;
+        font-size: clamp(34px, 5vw, 56px);
+        font-weight: 800;
       }
 
-      .story p {
-        margin: 0.7rem 0 0;
-        font-size: clamp(15px, 2.1vw, 30px);
-        color: #e9f0fb;
-        line-height: 1.35;
-      }
-
-      .chip {
-        display: inline-block;
+      .story-body {
         margin-top: 0.8rem;
-        background: rgba(255,255,255,0.12);
+        color: #e9f0fb;
+        font-size: clamp(19px, 2.9vw, 31px);
+        line-height: 1.28;
+        font-weight: 600;
+      }
+
+      .story-chip {
+        margin-top: 0.9rem;
+        align-self: flex-start;
         border: 1px solid rgba(255,255,255,0.35);
-        border-radius: 14px;
-        padding: 0.4rem 0.7rem;
-        font-size: clamp(14px, 1.9vw, 24px);
+        border-radius: 12px;
+        background: rgba(255,255,255,0.11);
+        color: #eff6ff;
+        font-size: clamp(14px, 2vw, 23px);
         font-weight: 700;
+        padding: 0.42rem 0.65rem;
       }
 
-      .story .footer {
+      .story-footer {
         margin-top: auto;
-        background: rgba(7,20,35,0.64);
-        border: 1px solid rgba(255,255,255,0.2);
+        border: 1px solid rgba(255,255,255,0.26);
+        background: rgba(9, 20, 34, 0.56);
+        border-radius: 13px;
+        padding: 0.6rem 0.72rem;
+        color: #f1f7ff;
+        line-height: 1.36;
+        font-size: clamp(14px, 2vw, 22px);
+        font-weight: 600;
+      }
+
+      .caption-box {
+        border: 1px solid var(--line);
+        background: #fbfdff;
         border-radius: 14px;
-        padding: 0.55rem 0.75rem;
-        font-size: clamp(13px, 1.7vw, 22px);
-        line-height: 1.4;
+        padding: 0.8rem;
       }
 
-      .story-text {
-        display: none;
+      .caption-box h4 {
+        margin: 0 0 0.4rem;
+        font-size: 0.84rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
       }
 
-      body.single .top,
-      body.single .story-wrap:not(.focus) {
-        display: none;
+      .caption {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: var(--ink);
+        user-select: text;
+        -webkit-user-select: text;
       }
 
-      body.single {
+      .tiny-note {
+        margin: 0.55rem 0 0;
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      body.clean {
+        background: #091426;
         min-height: 100vh;
         display: grid;
         place-items: center;
       }
 
-      body.single .story-wrap.focus {
-        width: min(100vw, 430px);
-        background: transparent;
-        border: none;
+      body.clean .page {
+        width: 100%;
+        max-width: none;
+        margin: 0;
         padding: 0;
       }
 
-      body.single .story {
-        border-radius: 0;
-        border: none;
-        width: 100vw;
-        max-width: 430px;
-        height: 100vh;
-        max-height: 860px;
+      body.clean .header,
+      body.clean .workspace > .panel:first-child,
+      body.clean .preview-head,
+      body.clean .caption-box {
+        display: none;
       }
 
-      @media (max-width: 640px) {
-        .list { grid-template-columns: 1fr; }
+      body.clean .workspace {
+        grid-template-columns: 1fr;
+        margin: 0;
+      }
+
+      body.clean .panel {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+      }
+
+      body.clean .preview {
+        padding: 0;
+      }
+
+      body.clean .stage {
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        min-height: 100vh;
+        padding: 0;
+      }
+
+      body.clean .story-canvas {
+        width: min(100vw, 460px);
+        height: min(100vh, calc(100vw * 16 / 9));
+        max-height: 100vh;
+        border-radius: 0;
+        border: none;
+      }
+
+      @media (max-width: 980px) {
+        .workspace { grid-template-columns: 1fr; }
+        .stories-list { max-height: none; }
+        .stage { min-height: 660px; }
       }
     </style>
   </head>
   <body>
-    <header class="top">
-      <div class="topbar">
-        <a class="home-link" href="/">← Башкы бетке кайтуу</a>
+    <div class="page">
+      <header class="header">
+        <div>
+          <a class="brand" href="/">
+            <span class="brand-mark">M</span>
+            <span class="brand-name">Mega<span>Kids</span></span>
+          </a>
+          <h1>Instagram Highlights Studio (Профессионал шаблондор)</h1>
+          <p class="lead">
+            Бардык story бир дизайн системасы менен жасалган. «Бир story» режиминде интерфейс жашырылат — Instagramга жүктөө үчүн идеалдуу скриншот аласыз.
+          </p>
+        </div>
+        <div class="header-actions">
+          <a class="btn" href="/">Башкы бет</a>
+          <button class="btn btn-primary" id="copyTextBtn">Текстти көчүрүү</button>
+          <a class="btn" id="singleLink" href="#">Бир story режим</a>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <section class="panel stories-list" id="storyList"></section>
+
+        <section class="panel preview">
+          <div class="preview-head">
+            <div>
+              <h3 class="preview-title" id="previewTitle"></h3>
+              <p class="preview-help">Скриншот үчүн: «Бир story режим» → браузер терезесин толук экран кылыңыз.</p>
+            </div>
+            <div class="preview-actions">
+              <button class="btn" id="prevBtn">← Мурунку</button>
+              <button class="btn" id="nextBtn">Кийинки →</button>
+            </div>
+          </div>
+
+          <div class="stage">
+            <article class="story-canvas" id="storyCanvas">
+              <div class="story-inner">
+                <div class="story-logo">MEGA <span>KIDS</span></div>
+                <div class="story-kicker" id="storyKicker"></div>
+                <h2 class="story-heading" id="storyHeading"></h2>
+                <p class="story-body" id="storyBody"></p>
+                <div class="story-chip" id="storyChip"></div>
+                <div class="story-footer" id="storyFooter"></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="caption-box">
+            <h4>Көчүрмө текст (Caption)</h4>
+            <p class="caption" id="captionText"></p>
+            <p class="tiny-note">Эскертүү: Instagram Story'ге жүктөө кол менен жасалат.</p>
+          </div>
+        </section>
       </div>
-      <h1>Instagram Highlights үчүн даяр story шаблондор</h1>
-      <p class="lead">
-        Бул бетте 9:16 форматтагы story макеттер бар. «Бирөө гана» баскычы менен бир шаблонду өзүнчө ачып скриншот кыла аласыз. «Текстти көчүрүү» баскычы caption/overlay үчүн тез көчүрөт.
-      </p>
-    </header>
-
-    <main class="list" id="stories">
-      <article class="story-wrap" data-id="cover">
-        <div class="story-head">
-          <h3 class="story-title">1) Cover — Highlights мукабасы</h3>
-          <div class="story-actions">
-            <a class="btn" href="?story=cover">Бирөө гана</a>
-            <button class="btn copy" data-copy="cover-text">Текстти көчүрүү</button>
-          </div>
-        </div>
-        <section class="story">
-          <div class="brand">MEGA <span>KIDS</span></div>
-          <div class="content">
-            <div class="kicker">БАТКЕН • «МЕГА» ИМАРАТЫ</div>
-            <h2>Балдардын модасы жана стили</h2>
-            <p>Балдарга стиль, ата-энелерге ишеним.</p>
-            <span class="chip">0–12 жаш • кийим • аксессуарлар</span>
-            <div class="footer">@mega_kids_batken • +996 776 66 85 80</div>
-          </div>
-        </section>
-        <textarea id="cover-text" class="story-text">Mega Kids Баткен — балдардын модасы жана стили. 0–12 жашка чейинки балдар үчүн кийим жана аксессуарлар.</textarea>
-      </article>
-
-      <article class="story-wrap" data-id="address">
-        <div class="story-head">
-          <h3 class="story-title">2) Дарек</h3>
-          <div class="story-actions">
-            <a class="btn" href="?story=address">Бирөө гана</a>
-            <button class="btn copy" data-copy="address-text">Текстти көчүрүү</button>
-          </div>
-        </div>
-        <section class="story">
-          <div class="brand">MEGA <span>KIDS</span></div>
-          <div class="content">
-            <div class="kicker">КАНТИП ТАПСА БОЛОТ?</div>
-            <h2>Дарегибиз</h2>
-            <p><strong>Баткен ш., Самат Садыков көчөсү, 50</strong></p>
-            <p>«Мега» имаратынын ичинде.</p>
-            <span class="chip">Локацияны Instagram био'дон ачыңыз</span>
-            <div class="footer">Mega Kids • Баткен</div>
-          </div>
-        </section>
-        <textarea id="address-text" class="story-text">Дарегибиз: Баткен ш., Самат Садыков көчөсү, 50. «Мега» имаратынын ичинде.</textarea>
-      </article>
-
-      <article class="story-wrap" data-id="hours">
-        <div class="story-head">
-          <h3 class="story-title">3) Иштөө сааты</h3>
-          <div class="story-actions">
-            <a class="btn" href="?story=hours">Бирөө гана</a>
-            <button class="btn copy" data-copy="hours-text">Текстти көчүрүү</button>
-          </div>
-        </div>
-        <section class="story">
-          <div class="brand">MEGA <span>KIDS</span></div>
-          <div class="content">
-            <div class="kicker">ИШТӨӨ УБАКТЫСЫ</div>
-            <h2>23:00 чейин ачык</h2>
-            <p>Күн сайын сиздерди күтөбүз.</p>
-            <span class="chip">Кечке чейин соодага ыңгайлуу</span>
-            <div class="footer">Суроо болсо: +996 776 66 85 80</div>
-          </div>
-        </section>
-        <textarea id="hours-text" class="story-text">Иштөө саатыбыз: күн сайын 23:00 чейин ачык.</textarea>
-      </article>
-
-      <article class="story-wrap" data-id="categories">
-        <div class="story-head">
-          <h3 class="story-title">4) Категориялар</h3>
-          <div class="story-actions">
-            <a class="btn" href="?story=categories">Бирөө гана</a>
-            <button class="btn copy" data-copy="categories-text">Текстти көчүрүү</button>
-          </div>
-        </div>
-        <section class="story">
-          <div class="brand">MEGA <span>KIDS</span></div>
-          <div class="content">
-            <div class="kicker">ЭМНЕ САТАБЫЗ</div>
-            <h2>Кийим • Бут кийим • Аксессуарлар</h2>
-            <p>Ар бир жашка жана сезонго ылайык тандоолор.</p>
-            <span class="chip">0–12 жаш</span>
-            <div class="footer">Жаңы коллекциялар дайыма жаңырып турат.</div>
-          </div>
-        </section>
-        <textarea id="categories-text" class="story-text">Кийим, бут кийим жана аксессуарлар. 0–12 жашка ылайык чоң тандоо.</textarea>
-      </article>
-
-      <article class="story-wrap" data-id="quality">
-        <div class="story-head">
-          <h3 class="story-title">5) Сапат жана стиль</h3>
-          <div class="story-actions">
-            <a class="btn" href="?story=quality">Бирөө гана</a>
-            <button class="btn copy" data-copy="quality-text">Текстти көчүрүү</button>
-          </div>
-        </div>
-        <section class="story">
-          <div class="brand">MEGA <span>KIDS</span></div>
-          <div class="content">
-            <div class="kicker">ЭМНЕ ҮЧҮН MEGA KIDS?</div>
-            <h2>Стилдүү коллекциялар, жогорку сапат</h2>
-            <p>Күнүмдүк кийүүгө ыңгайлуу жана балдарга жайлуу моделдер.</p>
-            <span class="chip">Сапат + Ыңгайлуулук + Стиль</span>
-            <div class="footer">Балдарга стиль, ата-энелерге ишеним.</div>
-          </div>
-        </section>
-        <textarea id="quality-text" class="story-text">Стилдүү коллекциялар жана жогорку сапат. Балдарга жайлуу, ата-энелерге ишенимдүү тандоо.</textarea>
-      </article>
-
-      <article class="story-wrap" data-id="contact">
-        <div class="story-head">
-          <h3 class="story-title">6) Байланыш</h3>
-          <div class="story-actions">
-            <a class="btn" href="?story=contact">Бирөө гана</a>
-            <button class="btn copy" data-copy="contact-text">Текстти көчүрүү</button>
-          </div>
-        </div>
-        <section class="story">
-          <div class="brand">MEGA <span>KIDS</span></div>
-          <div class="content">
-            <div class="kicker">БАЙЛАНЫШ</div>
-            <h2>+996 776 66 85 80</h2>
-            <p>Чалуу же WhatsApp аркылуу жазыңыз.</p>
-            <span class="chip">Instagram: @mega_kids_batken</span>
-            <div class="footer">Суроолоруңуз болсо дароо жооп беребиз.</div>
-          </div>
-        </section>
-        <textarea id="contact-text" class="story-text">Байланыш: +996 776 66 85 80. Instagram: @mega_kids_batken</textarea>
-      </article>
-
-      <article class="story-wrap" data-id="new">
-        <div class="story-head">
-          <h3 class="story-title">7) Жаңы коллекция</h3>
-          <div class="story-actions">
-            <a class="btn" href="?story=new">Бирөө гана</a>
-            <button class="btn copy" data-copy="new-text">Текстти көчүрүү</button>
-          </div>
-        </div>
-        <section class="story">
-          <div class="brand">MEGA <span>KIDS</span></div>
-          <div class="content">
-            <div class="kicker">ЖАҢЫ КОЛЛЕКЦИЯ</div>
-            <h2>Апта сайын жаңы моделдер</h2>
-            <p>Жаш топторуна ылайык жаңы түшкөн товарларды карап туруңуз.</p>
-            <span class="chip">Highlights: «Жаңы»</span>
-            <div class="footer">Профилди ээрчип, жаңылыкты өткөрбөңүз.</div>
-          </div>
-        </section>
-        <textarea id="new-text" class="story-text">Жаңы коллекция келди. Апта сайын жаңы моделдерди жайгаштырабыз.</textarea>
-      </article>
-
-      <article class="story-wrap" data-id="faq">
-        <div class="story-head">
-          <h3 class="story-title">8) Жиі берилген суроолор</h3>
-          <div class="story-actions">
-            <a class="btn" href="?story=faq">Бирөө гана</a>
-            <button class="btn copy" data-copy="faq-text">Текстти көчүрүү</button>
-          </div>
-        </div>
-        <section class="story">
-          <div class="brand">MEGA <span>KIDS</span></div>
-          <div class="content">
-            <div class="kicker">КӨП БЕРИЛГЕН СУРООЛОР</div>
-            <h2>Өлчөм барбы? Алмаштырасыздарбы?</h2>
-            <p>Түз дүкөнгө келип тандасаңыз эң ыңгайлуу. Кеңеш беребиз.</p>
-            <span class="chip">0–12 жаш өлчөмдөрү</span>
-            <div class="footer">Толук маалымат үчүн DM же чалуу.</div>
-          </div>
-        </section>
-        <textarea id="faq-text" class="story-text">Өлчөмдөр жана товар боюнча суроолор болсо DM жазыңыз же +996 776 66 85 80.</textarea>
-      </article>
-
-      <article class="story-wrap" data-id="cta">
-        <div class="story-head">
-          <h3 class="story-title">9) Чакыруу (CTA)</h3>
-          <div class="story-actions">
-            <a class="btn" href="?story=cta">Бирөө гана</a>
-            <button class="btn copy" data-copy="cta-text">Текстти көчүрүү</button>
-          </div>
-        </div>
-        <section class="story">
-          <div class="brand">MEGA <span>KIDS</span></div>
-          <div class="content">
-            <div class="kicker">КҮТӨБҮЗ</div>
-            <h2>Бүгүн келип көрүңүз</h2>
-            <p>Баткен, Самат Садыков 50 • «Мега» имараты</p>
-            <span class="chip">23:00 чейин ачык</span>
-            <div class="footer">@mega_kids_batken • +996 776 66 85 80</div>
-          </div>
-        </section>
-        <textarea id="cta-text" class="story-text">Бүгүн келип көрүңүз: Баткен, Самат Садыков 50 («Мега»). 23:00 чейин ачык.</textarea>
-      </article>
-    </main>
+    </div>
 
     <script>
+      const stories = [
+        {
+          id: "cover",
+          name: "Cover / Мукаба",
+          subtitle: "Highlights башкы көрүнүшү",
+          kicker: "БАТКЕН • «МЕГА» ИМАРАТЫ",
+          heading: "Балдардын модасы жана стили",
+          body: "Балдарга стиль, ата-энелерге ишеним.",
+          chip: "0–12 жаш • кийим • аксессуарлар",
+          footer: "@mega_kids_batken • +996 776 66 85 80",
+          caption: "Mega Kids Баткен — 0–12 жашка чейинки балдар үчүн кийим жана аксессуарлар."
+        },
+        {
+          id: "address",
+          name: "Дарек",
+          subtitle: "Кантип тапса болот",
+          kicker: "КАНТИП ТАПСА БОЛОТ?",
+          heading: "Дарегибиз",
+          body: "Баткен ш., Самат Садыков көчөсү, 50. «Мега» имаратынын ичинде.",
+          chip: "Локация: «Мега» имараты",
+          footer: "Mega Kids • Баткен",
+          caption: "Дарегибиз: Баткен ш., Самат Садыков көчөсү, 50. «Мега» имаратынын ичинде."
+        },
+        {
+          id: "hours",
+          name: "Иштөө сааты",
+          subtitle: "Күн сайын",
+          kicker: "ИШТӨӨ УБАКТЫСЫ",
+          heading: "23:00\nчейин\nачык",
+          body: "Күн сайын сиздерди күтөбүз.",
+          chip: "Кечки соодага ыңгайлуу",
+          footer: "+996 776 66 85 80",
+          caption: "Иштөө саатыбыз: күн сайын 23:00 чейин ачык."
+        },
+        {
+          id: "categories",
+          name: "Категориялар",
+          subtitle: "Негизги товарлар",
+          kicker: "ЭМНЕ САТАБЫЗ",
+          heading: "Кийим\nБут кийим\nАксессуарлар",
+          body: "Ар бир жашка жана сезонго ылайык тандоолор.",
+          chip: "0–12 жаш",
+          footer: "Жаңы коллекциялар дайыма жаңырып турат.",
+          caption: "Кийим, бут кийим жана аксессуарлар. 0–12 жаш үчүн чоң тандоо."
+        },
+        {
+          id: "quality",
+          name: "Сапат жана стиль",
+          subtitle: "Эмне үчүн Mega Kids",
+          kicker: "ЭМНЕ ҮЧҮН MEGA KIDS?",
+          heading: "Стилдүү\nколлекциялар\nжогорку сапат",
+          body: "Күнүмдүк кийүүгө ыңгайлуу жана жайлуу моделдер.",
+          chip: "Сапат + Ыңгайлуулук",
+          footer: "Балдарга стиль, ата-энелерге ишеним.",
+          caption: "Стилдүү коллекциялар жана жогорку сапат."
+        },
+        {
+          id: "contact",
+          name: "Байланыш",
+          subtitle: "Чалуу / WhatsApp",
+          kicker: "БАЙЛАНЫШ",
+          heading: "+996\n776 66\n85 80",
+          body: "Чалуу же WhatsApp аркылуу жазыңыз.",
+          chip: "Instagram: @mega_kids_batken",
+          footer: "DM'ге да жооп беребиз.",
+          caption: "Байланыш: +996 776 66 85 80. Instagram: @mega_kids_batken"
+        },
+        {
+          id: "new",
+          name: "Жаңы коллекция",
+          subtitle: "Апта сайын",
+          kicker: "ЖАҢЫ КОЛЛЕКЦИЯ",
+          heading: "Апта сайын\nжаңы\nмоделдер",
+          body: "Жаш топторуна ылайык жаңы түшкөн товарларды караңыз.",
+          chip: "Highlights: «Жаңы»",
+          footer: "Профилди ээрчип, жаңылыкты өткөрбөңүз.",
+          caption: "Жаңы коллекция келди. Апта сайын жаңы моделдер."
+        },
+        {
+          id: "faq",
+          name: "FAQ",
+          subtitle: "Көп берилген суроолор",
+          kicker: "КӨП БЕРИЛГЕН СУРООЛОР",
+          heading: "Өлчөм\nбарбы?\nАлмаштырасыздарбы?",
+          body: "Түз дүкөнгө келип тандасаңыз эң ыңгайлуу.",
+          chip: "0–12 жаш өлчөмдөрү",
+          footer: "Толук маалымат үчүн DM же чалуу.",
+          caption: "Өлчөмдөр жана товар боюнча суроолор болсо DM жазыңыз."
+        },
+        {
+          id: "cta",
+          name: "Чакыруу (CTA)",
+          subtitle: "Бүгүн келип көрүңүз",
+          kicker: "КҮТӨБҮЗ",
+          heading: "Бүгүн\nкелип\nкөрүңүз",
+          body: "Баткен, Самат Садыков 50 • «Мега» имараты.",
+          chip: "23:00 чейин ачык",
+          footer: "@mega_kids_batken • +996 776 66 85 80",
+          caption: "Бүгүн келип көрүңүз: Баткен, Самат Садыков 50 («Мега»). 23:00 чейин ачык."
+        }
+      ];
+
       const params = new URLSearchParams(window.location.search);
-      const selected = params.get("story");
-      if (selected) {
-        document.body.classList.add("single");
-        const target = document.querySelector(`.story-wrap[data-id="${selected}"]`);
-        if (target) {
-          target.classList.add("focus");
-        } else {
-          document.body.classList.remove("single");
+      const clean = params.get("clean") === "1";
+      if (clean) document.body.classList.add("clean");
+
+      const listEl = document.getElementById("storyList");
+      const titleEl = document.getElementById("previewTitle");
+      const kickerEl = document.getElementById("storyKicker");
+      const headingEl = document.getElementById("storyHeading");
+      const bodyEl = document.getElementById("storyBody");
+      const chipEl = document.getElementById("storyChip");
+      const footerEl = document.getElementById("storyFooter");
+      const captionEl = document.getElementById("captionText");
+      const singleLink = document.getElementById("singleLink");
+
+      let idx = stories.findIndex((s) => s.id === params.get("story"));
+      if (idx < 0) idx = 0;
+
+      function renderList() {
+        if (!listEl) return;
+        listEl.innerHTML = "";
+        stories.forEach((s, i) => {
+          const btn = document.createElement("button");
+          btn.className = "story-item" + (i === idx ? " active" : "");
+          btn.innerHTML = `<div class="story-num">${i + 1})</div><div class="story-name">${s.name}</div><div class="story-sub">${s.subtitle}</div>`;
+          btn.addEventListener("click", () => {
+            idx = i;
+            update(true);
+          });
+          listEl.appendChild(btn);
+        });
+      }
+
+      function update(pushState) {
+        const s = stories[idx];
+        titleEl.textContent = `${idx + 1}) ${s.name}`;
+        kickerEl.textContent = s.kicker;
+        headingEl.innerHTML = s.heading.replace(/\n/g, "<br />");
+        bodyEl.textContent = s.body;
+        chipEl.textContent = s.chip;
+        footerEl.textContent = s.footer;
+        captionEl.textContent = s.caption;
+        singleLink.href = `?story=${s.id}&clean=1`;
+        renderList();
+
+        if (pushState) {
+          const q = clean ? `?story=${s.id}&clean=1` : `?story=${s.id}`;
+          history.replaceState({}, "", q);
         }
       }
 
-      document.querySelectorAll(".copy").forEach((btn) => {
-        btn.addEventListener("click", async () => {
-          const id = btn.getAttribute("data-copy");
-          const ta = document.getElementById(id);
-          if (!ta) return;
-          const text = ta.value;
-          try {
-            await navigator.clipboard.writeText(text);
-            const prev = btn.textContent;
-            btn.textContent = "Көчүрүлдү";
-            setTimeout(() => (btn.textContent = prev), 1300);
-          } catch {
-            ta.style.display = "block";
-            ta.select();
-            document.execCommand("copy");
-            ta.style.display = "none";
-          }
-        });
+      document.getElementById("prevBtn")?.addEventListener("click", () => {
+        idx = (idx - 1 + stories.length) % stories.length;
+        update(true);
       });
+
+      document.getElementById("nextBtn")?.addEventListener("click", () => {
+        idx = (idx + 1) % stories.length;
+        update(true);
+      });
+
+      document.getElementById("copyTextBtn")?.addEventListener("click", async () => {
+        const text = stories[idx].caption;
+        try {
+          await navigator.clipboard.writeText(text);
+          const btn = document.getElementById("copyTextBtn");
+          const prev = btn.textContent;
+          btn.textContent = "Көчүрүлдү";
+          setTimeout(() => (btn.textContent = prev), 1200);
+        } catch {
+          // fallback
+          const ta = document.createElement("textarea");
+          ta.value = text;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          document.body.removeChild(ta);
+        }
+      });
+
+      update(false);
     </script>
   </body>
 </html>

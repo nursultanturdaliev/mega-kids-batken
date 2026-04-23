@@ -113,7 +113,7 @@ def main() -> None:
   <text x="2340" y="280" class="t box">{k["hours_open"]}</text>
   <text x="2340" y="380" class="t box">{k["samat_addr"]}</text>
   <text x="2340" y="480" class="t box">{k["mega_building"]}</text>
-  <text x="2340" y="620" class="t box accent">@mega_kids_batken</text>
+  <text x="2340" y="620" class="t box accent">@megabatken</text>
   <text x="2340" y="720" class="t box">+996 776 66 85 80</text>""",
         "0 0 3600 1200",
         3600,
@@ -143,7 +143,7 @@ def main() -> None:
   <text x="540" y="580" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="36">{k["clothing_line"]}</text>
   <text x="540" y="700" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="32">{k["samat_addr"]}</text>
   <text x="540" y="760" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="32">{k["mega_hours_line"]}</text>
-  <text x="540" y="920" text-anchor="middle" class="t" fill="#e85d4c" font-weight="800" font-size="38">@mega_kids_batken</text>
+  <text x="540" y="920" text-anchor="middle" class="t" fill="#e85d4c" font-weight="800" font-size="38">@megabatken</text>
   <text x="540" y="990" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="34">+996 776 66 85 80</text>
   <text x="540" y="1180" text-anchor="middle" class="t" fill="#a0aec0" font-size="26">{k["hashtags"]}</text>""",
         "0 0 1080 1350",
@@ -164,7 +164,7 @@ def main() -> None:
   <text x="540" y="620" text-anchor="middle" class="t" fill="#0f1419" font-weight="800" font-size="68">Mega Kids</text>
   <text x="540" y="700" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="34">{k["square_age"]}</text>
   <text x="540" y="780" text-anchor="middle" class="t" fill="#4a5568" font-weight="600" font-size="30">{k["square_addr"]}</text>
-  <text x="540" y="860" text-anchor="middle" class="t" fill="#e85d4c" font-weight="800" font-size="36">@mega_kids_batken</text>
+  <text x="540" y="860" text-anchor="middle" class="t" fill="#e85d4c" font-weight="800" font-size="36">@megabatken</text>
   <text x="540" y="920" text-anchor="middle" class="t" fill="#0f1419" font-weight="700" font-size="32">{k["square_hours_phone"]}</text>""",
         "0 0 1080 1080",
         1080,
@@ -191,7 +191,7 @@ def main() -> None:
   <text x="540" y="900" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="96">{k["open_exc"]}</text>
   <text x="540" y="1040" text-anchor="middle" class="t" fill="#fff" font-weight="600" font-size="38">{k["story_mid"]}</text>
   <text x="540" y="1180" text-anchor="middle" class="t" fill="#fff" font-weight="600" font-size="34">{k["story_addr"]}</text>
-  <text x="540" y="1380" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="42">@mega_kids_batken</text>
+  <text x="540" y="1380" text-anchor="middle" class="t" fill="#fff" font-weight="800" font-size="42">@megabatken</text>
   <text x="540" y="1480" text-anchor="middle" class="t" fill="#fff" font-weight="700" font-size="36">+996 776 66 85 80</text>
   <text x="540" y="1750" text-anchor="middle" class="t" fill="#ffffff" font-weight="600" font-size="28" opacity="0.85">{k["story_footer"]}</text>""",
         "0 0 1080 1920",
@@ -255,7 +255,7 @@ def main() -> None:
   <text x="60" y="310" class="t sm">{k["mega_building_caption"]}</text>
   <text x="60" y="380" class="t sm acc">{k["open_exc"]}</text>
   <text x="60" y="460" class="t sm">{k["samat_addr"]} \u00b7 {k["hours_open"]}</text>
-  <text x="60" y="520" class="t sm acc">@mega_kids_batken</text>
+  <text x="60" y="520" class="t sm acc">@megabatken</text>
   <text x="60" y="575" class="t sm">+996 776 66 85 80</text>""",
         "0 0 1200 630",
         1200,

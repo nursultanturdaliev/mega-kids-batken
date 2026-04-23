@@ -50,7 +50,7 @@ def add_brand(canvas: Image.Image, width: int, top: int = 36):
 def footer(draw: ImageDraw.ImageDraw, w: int, h: int, small: bool = False):
     fs = 34 if not small else 24
     y = h - 84 if not small else h - 62
-    txt = "Баткен | Самат Садыков 50   |   +996 776 66 85 80   |   @mega_kids_batken"
+    txt = "Баткен | Самат Садыков 50   |   +996 776 66 85 80   |   @megabatken"
     tw = draw.textlength(txt, font=fnt(fs, True))
     draw.text(((w - tw) / 2, y), txt, font=fnt(fs, True), fill=(239, 247, 255))
 
@@ -101,7 +101,7 @@ def main():
     strip = kids_strip(base, 780)
     can.alpha_composite(strip, (150, 360))
     rr(d, (90, 860, 990, 1030), 30, (232, 244, 255, 235), (214, 230, 244), 3)
-    d.text((145, 905), "Самат Садыков 50  |  @mega_kids_batken", font=fnt(32, True), fill=(24, 58, 92))
+    d.text((145, 905), "Самат Садыков 50  |  @megabatken", font=fnt(32, True), fill=(24, 58, 92))
     d.text((270, 950), "+996 776 66 85 80  |  23:00 чейин", font=fnt(30, True), fill=(24, 58, 92))
     can.convert("RGB").save(ASSETS / "photo-instagram-1080x1080.png", quality=95)
 
@@ -118,7 +118,7 @@ def main():
     d.text((170, 1515), "КИЙИМ • БУТ КИЙИМ • АКСЕССУАР", font=fnt(36, True), fill=(21, 54, 87))
     d.text((165, 1570), "Самат Садыков 50", font=fnt(40, True), fill=(21, 54, 87))
     d.text((165, 1625), "+996 776 66 85 80", font=fnt(40, True), fill=(21, 54, 87))
-    d.text((165, 1680), "@mega_kids_batken • 23:00 чейин", font=fnt(36, True), fill=(21, 54, 87))
+    d.text((165, 1680), "@megabatken • 23:00 чейин", font=fnt(36, True), fill=(21, 54, 87))
     can.convert("RGB").save(ASSETS / "photo-story-1080x1920.png", quality=95)
 
     # Facebook 1200x630
@@ -131,7 +131,7 @@ def main():
     can.alpha_composite(strip, (560, 250))
     d.text((110, 315), "Самат Садыков 50, «Мега»", font=fnt(38, True), fill=(243, 251, 255))
     d.text((110, 370), "+996 776 66 85 80", font=fnt(38, True), fill=(243, 251, 255))
-    d.text((110, 425), "@mega_kids_batken", font=fnt(38, True), fill=(255, 139, 119))
+    d.text((110, 425), "@megabatken", font=fnt(38, True), fill=(255, 139, 119))
     can.convert("RGB").save(ASSETS / "photo-facebook-1200x630.png", quality=95)
 
     print("Photo-style assets updated")
